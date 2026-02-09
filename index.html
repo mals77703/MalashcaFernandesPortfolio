@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malashca Fernandes | Cloud & ML Engineer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream: #e8dbcc;
+            --burgundy: #5f0c2f;
+            --dark-burgundy: #3c0e18;
+            --accent: #eaadc1;
+            --green: #bad797;
+            --text-dark: #2c2c2c;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: var(--burgundy);
+            color: var(--cream);
+            padding: 0.8rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--accent);
+            margin-top: 48px;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: var(--dark-burgundy);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-burgundy);
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        /* Hero */
+        .hero {
+            background: var(--dark-burgundy);
+            padding: 100px 2rem;
+        }
+
+        .hero-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-photo {
+            width: 360px;
+            height: 440px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 6px solid var(--accent);
+            background: var(--cream);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            color: var(--cream);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            color: var(--cream);
+            max-width: 650px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 42px;
+            background: var(--green);
+            color: var(--dark-burgundy);
+            text-decoration: none;
+            border-radius: 40px;
+            font-weight: 600;
+        }
+
+        section {
+            padding: 100px 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--burgundy);
+            margin-bottom: 3rem;
+        }
+
+        /* About */
+        .about-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-photo {
+            width: 300px;
+            height: 360px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 5px solid var(--green);
+            background: var(--white);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+        }
+
+        .about-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Cards reused */
+        .card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 25px;
+            border: 4px solid var(--burgundy);
+            margin-bottom: 2.5rem;
+        }
+
+        footer {
+            background: var(--burgundy);
+            color: var(--cream);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .hero-layout,
+            .about-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-photo,
+            .about-photo {
+                margin: 0 auto;
+            }
+
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    Cloud & Machine Learning Engineer • AWS • Terraform • Python
+</header>
+
+<nav>
+    <div class="nav-container">
+        <a href="#" class="logo">Malashca</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-layout">
+        <div class="hero-photo">
+            <img src="pfp.jpeg" alt="Malashca Fernandes">
+        </div>
+        <div>
+            <h1>Malashca Fernandes</h1>
+            <p class="hero-subtitle">Cloud & Machine Learning Engineer</p>
+            <p class="hero-description">
+                Cloud engineer with hands-on AWS experience and ML background.
+                Building scalable, reliable systems with a focus on automation and infrastructure excellence.
+            </p>
+            <a href="#contact" class="cta-button">Let's Connect</a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+        <div>
+            <p>
+                I'm a cloud engineer based in Mumbai with hands-on AWS experience and a strong ML background.
+                I specialize in VPC architecture, Infrastructure as Code, CI/CD pipelines, and serverless deployments.
+            </p>
+            <p>
+                With a Master's degree in Big Data Analytics, I bridge theory and production-grade cloud systems.
+            </p>
+        </div>
+        <div class="about-photo">
+            <img src="pfp.jpeg" alt="Malashca Fernandes">
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="card">
+        <h3>Secure Multi-Tier VPC Architecture</h3>
+        <p>Production-grade AWS VPC with multi-AZ public/private subnets and hardened networking.</p>
+    </div>
+    <div class="card">
+        <h3>Automated Infrastructure with Terraform</h3>
+        <p>Version-controlled infrastructure provisioning with modular Terraform stacks.</p>
+    </div>
+    <div class="card">
+        <h3>Serverless API with CI/CD</h3>
+        <p>Lambda + API Gateway + Docker with automated pipelines.</p>
+    </div>
+</section>
+
+<section id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="card">
+        <h3>Python Developer — Affix Center Softect Services</h3>
+        <p>March 2025 – September 2025</p>
+        <ul>
+            <li>Supported cloud applications with CV pipelines</li>
+            <li>Automated workflows using Python</li>
+            <li>Maintained Linux-based production systems</li>
+        </ul>
+    </div>
+</section>
+
+<footer id="contact">
+    <p>&copy; 2026 Malashca Fernandes</p>
+</footer>
+
+</body>
+</html>
